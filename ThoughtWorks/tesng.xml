@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression" >
+    <test  name="Login_tests">
+        <parameter name="userName" value="xt2@xt.com"></parameter>
+        <parameter name="password" value="infy1234"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
+        <groups>
+            <run>
+                <include name="regression"></include>
+                <exclude name="checkout"></exclude>
+            </run>
+        </groups>
+        <classes>
+            <class name="logintests.Login" />
+            <class name="searchtests.Search"/>
+            <class name="logintests.LoginDataProvider"/>
+</classes>
+</test>
+</suite>
